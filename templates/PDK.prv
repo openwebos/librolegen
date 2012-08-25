@@ -1,0 +1,14 @@
+{
+    "role": {
+    "exeName":"XXXEXEPATHXXX",
+    "type": "regular",
+    "allowedNames": ["XXXIDXXX","","com.palm.cplite"]
+    },
+    "permissions": [
+        {
+         "service":"XXXIDXXX",
+         "outbound":["com.palm.audio","com.palm.mediad","com.palm.hidd","com.palm.applicationManager","com.palm.location","com.palm.deviceprofile","com.palm.connectionmanager","com.palm.vibrate"],
+         "inbound":[]
+        }
+    ]
+}

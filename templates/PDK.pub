@@ -1,0 +1,14 @@
+{
+    "role": {
+    "exeName":"XXXEXEPATHXXX",
+    "type": "regular",
+    "allowedNames": ["XXXIDXXX",""]
+    },
+    "permissions": [
+        {
+         "service":"XXXIDXXX",
+         "outbound":["*"],
+         "inbound":[]
+        }
+    ]
+}
