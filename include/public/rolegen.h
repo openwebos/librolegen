@@ -1,6 +1,7 @@
 // @@@LICENSE
 //
 //      Copyright (c) 2010-2012 Hewlett-Packard Development Company, L.P.
+//      Copyright (c) 2013 LG Electronics, INC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,6 +34,6 @@
 
 using namespace std;
 
-void pdkGenerateRole(string id, string executablePath);
+void ndkGenerateRole(string id, string executablePath);
 void roleGenerate(string templatePath, string destinationPath, string id, string executablePath);
 void tritonGenerateRole(string id);

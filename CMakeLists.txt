@@ -1,6 +1,7 @@
 # @@@LICENSE
 #
 #      Copyright (c) 2010-2012 Hewlett-Packard Development Company, L.P.
+#      Copyright (c) 2013 LG Electronics, INC.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +22,8 @@ cmake_minimum_required(VERSION 2.8.7)
 project(rolegen CXX)
 
 include(webOS/webOS)
-webos_modules_init(1 0 0 QUALIFIER RC2)
-webos_component(2 0 0)
+webos_modules_init(1 0 0 QUALIFIER RC4)
+webos_component(2 1 0)
 
 webos_build_pkgconfig()
 
@@ -34,3 +35,6 @@ webos_configure_source_files(sourcelist src/rolegen.cpp)
 add_library(rolegen SHARED ${sourcelist})
 
 webos_build_library()
+
+file(GLOB SOURCE_FILES templates/*.*)
+install(FILES ${SOURCE_FILES} DESTINATION ${WEBOS_INSTALL_DATADIR}/rolegen/templates)

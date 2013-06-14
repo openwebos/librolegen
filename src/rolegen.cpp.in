@@ -1,6 +1,7 @@
 // @@@LICENSE
 //
 //      Copyright (c) 2010-2012 Hewlett-Packard Development Company, L.P.
+//      Copyright (c) 2013 LG Electronics, INC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,8 +26,8 @@
 
 #define DYN_PUBROLES_PATH	"@WEBOS_INSTALL_SYSBUS_DYNPUBROLESDIR@"
 #define DYN_PRVROLES_PATH	"@WEBOS_INSTALL_SYSBUS_DYNPRVROLESDIR@"
-#define PDK_TEMPLATE_PATH	"@WEBOS_INSTALL_WEBOS_PREFIX@/ls2/templates/PDK"
-#define TRITON_TEMPLATE_PATH 	"@WEBOS_INSTALL_WEBOS_PREFIX@/ls2/templates/Triton"
+#define NDK_TEMPLATE_PATH	"@WEBOS_INSTALL_DATADIR@/rolegen/templates/NDK"
+#define TRITON_TEMPLATE_PATH 	"@WEBOS_INSTALL_DATADIR@/rolegen/templates/Triton"
 #define TRITON_EXE_PATH		"js"
 
 using namespace std;
@@ -102,20 +103,20 @@ void roleGenerate(string templatePath, string destinationPath, string id, string
 		system("@WEBOS_INSTALL_BINDIR@/ls-control scan-services");
 }
 
-void pdkGenerateRole(string id, string executablePath)
+void ndkGenerateRole(string id, string executablePath)
 {
 	checkDirStructure();
 	
 	string templatePath;
 	string destinationPath;
 
-	templatePath = PDK_TEMPLATE_PATH;
+	templatePath = NDK_TEMPLATE_PATH;
 	destinationPath = DYN_PUBROLES_PATH;
 	destinationPath += "/" + id + ".json";
 	
 	roleGenerate(templatePath+".pub", destinationPath, id, executablePath);
 	
-	templatePath = PDK_TEMPLATE_PATH;
+	templatePath = NDK_TEMPLATE_PATH;
 	destinationPath = DYN_PRVROLES_PATH;
 	destinationPath += "/" + id + ".json";
 	
