@@ -122,6 +122,12 @@ void ndkGenerateRole(string id, string executablePath)
 	roleGenerate(templatePath+".prv", destinationPath, id, executablePath);
 }
 
+// deprecated
+void pdkGenerateRole(string id, string executablePath)
+{
+	ndkGenerateRole(id, executablePath);
+}
+
 void tritonGenerateRole(string id)
 {
 	checkDirStructure();
