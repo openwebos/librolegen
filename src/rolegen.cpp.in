@@ -99,7 +99,7 @@ void roleGenerate(string templatePath, string destinationPath, string id, string
 	
 	// this is temporary until LS has a real API or mechanism to pick up changes
 	int rc __attribute__((unused)) =
-		system("@WEBOS_INSTALL_SBINDIR@/ls-control scan-services");
+		system("@WEBOS_INSTALL_SBINDIR@/ls-control scan-volatile-dirs");
 }
 
 void ndkGenerateRole(string id, string executablePath)
